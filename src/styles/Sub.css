@@ -1,0 +1,40 @@
+.topbar_container {
+  height: 6em;
+}
+.topbar_logo {
+  width: 2rem;
+}
+.topbar_links {
+  text-decoration: none;
+  color: white;
+}
+.topbar_links:hover, .topbar_links.active {
+  color: #61DAFB;
+}
+.SearchBar_input {
+  border-radius: 1rem;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid transparent;
+}
+.SearchBar_input::placeholder {
+  color: white;
+}
+.ArticleShort_container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* height: 54rem;
+  overflow: auto; */
+}
+.ArticleShort_ImageOverlay {
+  background-color: rgba(0, 0, 0, 0.74);
+  color: white;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
