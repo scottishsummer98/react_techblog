@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ArticleShort from "../Sub/ArticleShort";
-import ArticleDetailed from "../Sub/ArticleDetailed";
+import ArticleShort from "../sub/ArticleShort";
+import ArticleDetailed from "../sub/ArticleDetailed";
 import techdata from "../../api/TechApi.js";
 
 const Home = () => {

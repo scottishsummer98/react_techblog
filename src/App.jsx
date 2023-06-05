@@ -1,14 +1,14 @@
 import "./styles/App.css";
 import "./styles/Main.css";
 import "./styles/Sub.css";
-import Home from "./components/Main/Home";
-import Footer from "./components/Main/Footer";
-import Header from "./components/Main/Header";
+import Home from "./components/main/Home";
+import Footer from "./components/main/Footer";
+import Header from "./components/main/Header";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Archives from "./components/Main/Archives";
-import Career from "./components/Main/Career";
-import Events from "./components/Main/Events";
-import More from "./components/Main/More";
+import Archives from "./components/main/Archives";
+import Career from "./components/main/Career";
+import Events from "./components/main/Events";
+import More from "./components/main/More";
 
 function App() {
   return (
