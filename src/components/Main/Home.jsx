@@ -1,23 +1,28 @@
 import React, { Component } from 'react'
 import ArticleShort from "../sub/ArticleShort";
 import ArticleDetailed from "../sub/ArticleDetailed";
-import techArticles  from "../../api/TechApi";
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+  return {
+    articles: state.articles
+  }
+}
 
 export class Home extends Component {
   state = {
-      articles: techArticles,
       selectedArticle: null,
   }
   onArticleSelect = (i) => {
       this.setState({
-        selectedArticle: techArticles[i]
+        selectedArticle: this.props.articles[i]
       })
     }
   render() {
     document.title = "Tech React";
     
     
-    const article = this.state.articles.map((article, index) => {
+    const article = this.props.articles.map((article, index) => {
     return (
       <div key={index} onClick={() => this.onArticleSelect(index)}>
         <ArticleShort article={article} />
@@ -37,4 +42,4 @@ export class Home extends Component {
   }
 }
 
-export default Home
+export default connect(mapStateToProps)(Home)
