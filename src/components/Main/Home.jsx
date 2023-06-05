@@ -4,6 +4,7 @@ import ArticleDetailed from "../Sub/ArticleDetailed";
 import techdata from "../../api/TechApi.js";
 
 const Home = () => {
+  document.title = "Tech React";
   const [articles] = useState(techdata.articles);
   const [selectedArticle, setselectedArticle] = useState(null);
   const clicked = (index) => {
