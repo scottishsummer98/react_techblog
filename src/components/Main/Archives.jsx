@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Component } from 'react'
 
+export class Archives extends Component {
+  render() {
+    document.title = "Archives";
+    return (
+      <div>Archives</div>
+    )
+  }
+}
 
-const Archives = () => {
-  document.title = "Archives";
-  return <div>Archives</div>;
-};
-
-export default Archives;
+export default Archives

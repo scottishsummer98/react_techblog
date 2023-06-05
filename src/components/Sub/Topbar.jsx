@@ -35,8 +35,8 @@ function Topbar() {
             </NavLink>
           </NavbarBrand>
           <NavbarBrand>
-            <NavLink className="topbar_links" to="/more">
-              More
+            <NavLink className="topbar_links" to="/contact">
+              Contact
             </NavLink>
           </NavbarBrand>
         </Nav>

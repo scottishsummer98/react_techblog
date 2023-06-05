@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Component } from 'react'
 
-const Career = () => {
-  document.title = "Career";
-  return <div>Career</div>;
-};
+export class Career extends Component {
+  render() {
+    document.title = "Career";
+    return (
+      <div>Career</div>
+    )
+  }
+}
 
-export default Career;
+export default Career

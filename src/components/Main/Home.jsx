@@ -1,33 +1,40 @@
-import React, { useState } from "react";
+import React, { Component } from 'react'
 import ArticleShort from "../sub/ArticleShort";
 import ArticleDetailed from "../sub/ArticleDetailed";
-import techdata from "../../api/TechApi.js";
+import techArticles  from "../../api/TechApi";
 
-const Home = () => {
-  document.title = "Tech React";
-  const [articles] = useState(techdata.articles);
-  const [selectedArticle, setselectedArticle] = useState(null);
-  const clicked = (index) => {
-    setselectedArticle(articles[index]);
-    console.log(articles[index]);
-  };
-  const article = articles.map((article, index) => {
+export class Home extends Component {
+  state = {
+      articles: techArticles,
+      selectedArticle: null,
+  }
+  onArticleSelect = (i) => {
+      this.setState({
+        selectedArticle: techArticles[i]
+      })
+    }
+  render() {
+    document.title = "Tech React";
+    
+    
+    const article = this.state.articles.map((article, index) => {
     return (
-      <div key={index} onClick={() => clicked(index)}>
+      <div key={index} onClick={() => this.onArticleSelect(index)}>
         <ArticleShort article={article} />
       </div>
     );
   });
-  return (
-    <div className="home_container">
+    return (
+      <div className="home_container">
       <div className="ArticleShort_container">{article}</div>
       <div>
-        {selectedArticle ? (
-          <ArticleDetailed selectedArticle={selectedArticle} />
+        {this.state.selectedArticle ? (
+          <ArticleDetailed selectedArticle={this.state.selectedArticle} />
         ) : null}
       </div>
     </div>
-  );
-};
+    )
+  }
+}
 
-export default Home;
+export default Home

@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Component } from 'react'
 
-const Events = () => {
-  document.title = "Events";
-  return <div>Events</div>;
-};
+export class Events extends Component {
+  render() {
+    document.title = "Events";
+    return (
+      <div>Events</div>
+    )
+  }
+}
 
-export default Events;
+export default Events
