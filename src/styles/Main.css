@@ -3,3 +3,32 @@
     flex-direction: row;
     gap: 2rem;
 }
+.footer_container {
+  position:absolute;
+  right:0;
+  left:0;
+  padding:3rem;
+  background-color: #212529;
+  color: white;
+  
+}
+.footer_columns {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+  justify-content: center;
+}
+.footer_items {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  align-items: center;
+}
+.footer_logo {
+  width: 5rem;
+}
+.footer_socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
