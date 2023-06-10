@@ -2,12 +2,12 @@ import React from "react";
 import { Card, CardTitle, CardText, CardImg, CardImgOverlay } from "reactstrap";
 import dateFormat from "dateformat";
 
-const ArticleShort = (props) => {
+const TechArticleShort = (props) => {
   return (
     <Card color="dark" inverse style={{ cursor: "pointer" }}>
       <CardImg
         alt="Card image cap"
-        src={props.article.urlToImage}
+        src={props.techArticle.urlToImage}
         style={{
           height: 270,
           width: "35rem",
@@ -15,11 +15,11 @@ const ArticleShort = (props) => {
       />
       <CardImgOverlay>
         <div className="ArticleShort_ImageOverlay">
-          <CardTitle tag="h5">{props.article.title}</CardTitle>
+          <CardTitle tag="h5">{props.techArticle.title}</CardTitle>
           <CardText>
             <small>
               {dateFormat(
-                props.article.publishedAt,
+                props.techArticle.publishedAt,
                 "dddd, mmmm dS, yyyy, h:MM:ss TT"
               )}
             </small>
@@ -30,4 +30,4 @@ const ArticleShort = (props) => {
   );
 };
 
-export default ArticleShort;
+export default TechArticleShort;

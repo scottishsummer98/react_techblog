@@ -279,145 +279,98 @@ const techArticlesComments = [
     user: "HardwareStartupFounder",
     date: "2023-06-10T22:22:08Z",
   },
+
   {
     articleId: 7,
     id: 35,
-    comment:
-      "The absence of SVB in the venture debt space creates challenges for startups seeking alternative funding options. Private lenders may not have the same level of expertise and network that SVB offered.",
-    user: "FundingExpert2023",
-    date: "2023-06-10T21:14:42Z",
-  },
-  {
-    articleId: 7,
-    id: 36,
-    comment:
-      "SVB's departure from the venture debt market leaves a void that may not be easily filled by private lenders. Startups may need to explore other avenues or adapt their financing strategies accordingly.",
-    user: "StartupFinanceAdvisor",
-    date: "2023-06-10T21:37:19Z",
-  },
-  {
-    articleId: 7,
-    id: 37,
-    comment:
-      "The venture debt gap left by SVB could have a significant impact on early-stage startups. It highlights the importance of a diverse funding ecosystem and the need for innovative solutions in the financing landscape.",
-    user: "EntrepreneurialMindset",
-    date: "2023-06-10T21:59:55Z",
-  },
-  {
-    articleId: 7,
-    id: 38,
-    comment:
-      "Private lenders may struggle to match SVB's specialized focus and understanding of the venture debt market. Startups will need to explore alternative financing options and potentially seek new partnerships.",
-    user: "FinTechEnthusiast23",
-    date: "2023-06-10T22:22:08Z",
-  },
-  {
-    articleId: 7,
-    id: 39,
-    comment:
-      "The departure of SVB from the venture debt landscape poses challenges for startups. Private lenders may lack the same level of industry knowledge and tailored financing options.",
-    user: "StartupInsiderPro",
-    date: "2023-06-10T22:45:15Z",
-  },
-  {
-    articleId: 7,
-    id: 40,
-    comment:
-      "The absence of SVB in the venture debt market creates a gap that may be difficult to fill. Startups will need to explore alternative financing sources and adapt their strategies accordingly.",
-    user: "FundingStrategist",
-    date: "2023-06-10T23:08:22Z",
-  },
-  {
-    articleId: 8,
-    id: 41,
     comment:
       "The dual-screen design of Lenovo's Yoga Book 9i offers a unique and versatile user experience. It allows for improved productivity, multitasking, and creativity on a laptop.",
     user: "LenovoFanatic99",
     date: "2023-06-10T21:14:42Z",
   },
   {
-    articleId: 8,
-    id: 42,
+    articleId: 7,
+    id: 36,
     comment:
       "Lenovo has truly pushed the boundaries with the Yoga Book 9i. The dual-screen functionality opens up new possibilities for content creators, professionals, and everyday users alike.",
     user: "TechInnovator23",
     date: "2023-06-10T21:37:19Z",
   },
   {
-    articleId: 8,
-    id: 43,
+    articleId: 7,
+    id: 37,
     comment:
       "The Yoga Book 9i showcases Lenovo's commitment to innovation and user-centric design. The dual-screen setup enhances productivity and allows for seamless interaction with digital content.",
     user: "DesignEnthusiast2023",
     date: "2023-06-10T21:59:55Z",
   },
   {
-    articleId: 8,
-    id: 44,
+    articleId: 7,
+    id: 38,
     comment:
       "Lenovo's Yoga Book 9i is a game-changer in the laptop market. The dual-screen feature provides an immersive and efficient computing experience for both work and entertainment purposes.",
     user: "TechReviewerPro",
     date: "2023-06-10T22:22:08Z",
   },
   {
-    articleId: 8,
-    id: 45,
+    articleId: 7,
+    id: 39,
     comment:
       "The dual-screen design of Lenovo's Yoga Book 9i offers a new level of productivity and creativity. It's exciting to see how technology continues to evolve and enhance our computing experiences.",
     user: "TechEnthusiast2023",
     date: "2023-06-10T22:45:15Z",
   },
   {
-    articleId: 8,
-    id: 46,
+    articleId: 7,
+    id: 40,
     comment:
       "Lenovo's Yoga Book 9i brings innovation to the laptop market with its dual-screen setup. It provides a unique and immersive user experience for various tasks and applications.",
     user: "DigitalCreator23",
     date: "2023-06-10T23:08:22Z",
   },
   {
-    articleId: 8,
-    id: 47,
+    articleId: 7,
+    id: 41,
     comment:
       "The dual-screen functionality of Lenovo's Yoga Book 9i offers enhanced versatility and productivity. It's a step forward in reimagining how we interact with laptops and utilize screen real estate.",
     user: "TechEnthusiastPro",
     date: "2023-06-10T23:31:45Z",
   },
   {
-    articleId: 9,
-    id: 48,
+    articleId: 8,
+    id: 42,
     comment:
       "While Snapchat's AI bot may have limitations, it's reassuring to know that privacy and security are prioritized. Sending nudes accidentally can be a serious concern, and Snapchat's precautions are commendable.",
     user: "PrivacyAdvocate2023",
     date: "2023-06-10T21:14:42Z",
   },
   {
-    articleId: 9,
-    id: 49,
+    articleId: 8,
+    id: 43,
     comment:
       "Snapchat's AI bot may not be the smartest, but its commitment to preventing sensitive content from being sent unintentionally is a crucial feature. It's better to err on the side of caution when it comes to privacy.",
     user: "DigitalSafetyEnthusiast",
     date: "2023-06-10T21:37:19Z",
   },
   {
-    articleId: 9,
-    id: 50,
+    articleId: 8,
+    id: 44,
     comment:
       "The lack of intelligence in Snapchat's AI bot might be a drawback, but its purpose of preventing accidental transmission of explicit content is commendable. Prioritizing user safety is always a positive move.",
     user: "SnapchatUser99",
     date: "2023-06-10T21:59:55Z",
   },
   {
-    articleId: 9,
-    id: 51,
+    articleId: 8,
+    id: 45,
     comment:
       "Snapchat's AI bot may not be the smartest one out there, but it fulfills its main purpose of protecting users from potentially embarrassing situations. It's a reassuring feature for many Snapchat users.",
     user: "SocialMediaEnthusiast23",
     date: "2023-06-10T22:22:08Z",
   },
   {
-    articleId: 9,
-    id: 52,
+    articleId: 8,
+    id: 46,
     comment:
       "Snapchat's AI bot may not be the most advanced, but its focus on preventing unwanted explicit content is a valuable aspect. User privacy and protection should always be a priority.",
     user: "DigitalPrivacyDefender",

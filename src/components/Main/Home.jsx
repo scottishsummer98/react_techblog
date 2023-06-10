@@ -1,45 +1,47 @@
-import React, { Component } from 'react'
-import ArticleShort from "../sub/ArticleShort";
-import ArticleDetailed from "../sub/ArticleDetailed";
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import TechArticleShort from "../sub/TechArticleShort";
+import TechArticleDetailed from "../sub/TechArticleDetailed";
+import { connect } from "react-redux";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    articles: state.articles
-  }
-}
+    techArticles: state.techArticles,
+  };
+};
 
 export class Home extends Component {
   state = {
-      selectedArticle: null,
-  }
-  onArticleSelect = (i) => {
-      this.setState({
-        selectedArticle: this.props.articles[i]
-      })
-    }
+    selectedTechArticle: null,
+  };
+  onTechArticleSelect = (i) => {
+    window.scrollTo(0, 0);
+    this.setState({
+      selectedTechArticle: this.props.techArticles[i],
+    });
+  };
   render() {
     document.title = "Tech React";
-    
-    
-    const article = this.props.articles.map((article, index) => {
-    return (
-      <div key={index} onClick={() => this.onArticleSelect(index)}>
-        <ArticleShort article={article} />
-      </div>
-    );
-  });
+
+    const techarticle = this.props.techArticles.map((techArticle, index) => {
+      return (
+        <div key={index} onClick={() => this.onTechArticleSelect(index)}>
+          <TechArticleShort techArticle={techArticle} />
+        </div>
+      );
+    });
     return (
       <div className="home_container">
-      <div className="ArticleShort_container">{article}</div>
-      <div>
-        {this.state.selectedArticle ? (
-          <ArticleDetailed selectedArticle={this.state.selectedArticle} />
-        ) : null}
+        <div className="ArticleShort_container">{techarticle}</div>
+        <div>
+          {this.state.selectedTechArticle ? (
+            <TechArticleDetailed
+              selectedTechArticle={this.state.selectedTechArticle}
+            />
+          ) : null}
+        </div>
       </div>
-    </div>
-    )
+    );
   }
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Home);

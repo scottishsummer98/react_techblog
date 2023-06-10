@@ -1,9 +1,11 @@
-import articles from "../api/TechApi";
+import techArticles from "../api/TechApi";
+import techArticlesComments from "../api/TechCommentsApi";
 
 const initialState = {
-    articles: articles
-}
+  techArticles: techArticles,
+  techArticlesComments: techArticlesComments,
+};
 
 export const Reducer = (state = initialState, action) => {
-    return state;
-}
+  return state;
+};
