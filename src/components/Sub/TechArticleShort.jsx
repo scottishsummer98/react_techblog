@@ -14,7 +14,7 @@ const TechArticleShort = (props) => {
         }}
       />
       <CardImgOverlay>
-        <div className="ArticleShort_ImageOverlay">
+        <div className="techArticleShort_ImageOverlay">
           <CardTitle tag="h5">{props.techArticle.title}</CardTitle>
           <CardText>
             <small>

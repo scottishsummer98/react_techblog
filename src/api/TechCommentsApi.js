@@ -243,13 +243,6 @@ const techArticlesComments = [
   {
     articleId: 6,
     id: 30,
-    comment: "How to prepare a hardware startup for raising a Series A?",
-    user: "StartupEnthusiast",
-    date: "2023-06-10T20:51:36Z",
-  },
-  {
-    articleId: 6,
-    id: 31,
     comment:
       "Building a solid foundation and demonstrating traction are key when preparing for a Series A round. It's important to have a clear roadmap, strong team, and compelling product to attract investors.",
     user: "InvestmentAdvisor23",
@@ -257,7 +250,7 @@ const techArticlesComments = [
   },
   {
     articleId: 6,
-    id: 32,
+    id: 31,
     comment:
       "Prioritize scalability and show potential investors that your hardware startup has a clear path to growth. Develop a strong business plan and showcase your market opportunity to stand out in the Series A funding landscape.",
     user: "BusinessStrategyExpert",
@@ -265,7 +258,7 @@ const techArticlesComments = [
   },
   {
     articleId: 6,
-    id: 33,
+    id: 32,
     comment:
       "Series A funding often requires demonstrating product-market fit and a solid customer base. Focus on building a strong customer acquisition strategy and showcase your early successes to attract investors.",
     user: "CustomerSuccessAdvocate",
@@ -273,7 +266,7 @@ const techArticlesComments = [
   },
   {
     articleId: 6,
-    id: 34,
+    id: 33,
     comment:
       "Raising a Series A round for a hardware startup can be challenging but rewarding. Be prepared to articulate your unique value proposition, address investor concerns, and showcase your competitive advantage in the market.",
     user: "HardwareStartupFounder",
@@ -282,7 +275,7 @@ const techArticlesComments = [
 
   {
     articleId: 7,
-    id: 35,
+    id: 34,
     comment:
       "The dual-screen design of Lenovo's Yoga Book 9i offers a unique and versatile user experience. It allows for improved productivity, multitasking, and creativity on a laptop.",
     user: "LenovoFanatic99",
@@ -290,7 +283,7 @@ const techArticlesComments = [
   },
   {
     articleId: 7,
-    id: 36,
+    id: 35,
     comment:
       "Lenovo has truly pushed the boundaries with the Yoga Book 9i. The dual-screen functionality opens up new possibilities for content creators, professionals, and everyday users alike.",
     user: "TechInnovator23",
@@ -298,7 +291,7 @@ const techArticlesComments = [
   },
   {
     articleId: 7,
-    id: 37,
+    id: 36,
     comment:
       "The Yoga Book 9i showcases Lenovo's commitment to innovation and user-centric design. The dual-screen setup enhances productivity and allows for seamless interaction with digital content.",
     user: "DesignEnthusiast2023",
@@ -306,7 +299,7 @@ const techArticlesComments = [
   },
   {
     articleId: 7,
-    id: 38,
+    id: 37,
     comment:
       "Lenovo's Yoga Book 9i is a game-changer in the laptop market. The dual-screen feature provides an immersive and efficient computing experience for both work and entertainment purposes.",
     user: "TechReviewerPro",
@@ -314,7 +307,7 @@ const techArticlesComments = [
   },
   {
     articleId: 7,
-    id: 39,
+    id: 38,
     comment:
       "The dual-screen design of Lenovo's Yoga Book 9i offers a new level of productivity and creativity. It's exciting to see how technology continues to evolve and enhance our computing experiences.",
     user: "TechEnthusiast2023",
@@ -322,7 +315,7 @@ const techArticlesComments = [
   },
   {
     articleId: 7,
-    id: 40,
+    id: 39,
     comment:
       "Lenovo's Yoga Book 9i brings innovation to the laptop market with its dual-screen setup. It provides a unique and immersive user experience for various tasks and applications.",
     user: "DigitalCreator23",
@@ -330,7 +323,7 @@ const techArticlesComments = [
   },
   {
     articleId: 7,
-    id: 41,
+    id: 40,
     comment:
       "The dual-screen functionality of Lenovo's Yoga Book 9i offers enhanced versatility and productivity. It's a step forward in reimagining how we interact with laptops and utilize screen real estate.",
     user: "TechEnthusiastPro",
@@ -338,7 +331,7 @@ const techArticlesComments = [
   },
   {
     articleId: 8,
-    id: 42,
+    id: 41,
     comment:
       "While Snapchat's AI bot may have limitations, it's reassuring to know that privacy and security are prioritized. Sending nudes accidentally can be a serious concern, and Snapchat's precautions are commendable.",
     user: "PrivacyAdvocate2023",
@@ -346,7 +339,7 @@ const techArticlesComments = [
   },
   {
     articleId: 8,
-    id: 43,
+    id: 42,
     comment:
       "Snapchat's AI bot may not be the smartest, but its commitment to preventing sensitive content from being sent unintentionally is a crucial feature. It's better to err on the side of caution when it comes to privacy.",
     user: "DigitalSafetyEnthusiast",
@@ -354,7 +347,7 @@ const techArticlesComments = [
   },
   {
     articleId: 8,
-    id: 44,
+    id: 43,
     comment:
       "The lack of intelligence in Snapchat's AI bot might be a drawback, but its purpose of preventing accidental transmission of explicit content is commendable. Prioritizing user safety is always a positive move.",
     user: "SnapchatUser99",
@@ -362,7 +355,7 @@ const techArticlesComments = [
   },
   {
     articleId: 8,
-    id: 45,
+    id: 44,
     comment:
       "Snapchat's AI bot may not be the smartest one out there, but it fulfills its main purpose of protecting users from potentially embarrassing situations. It's a reassuring feature for many Snapchat users.",
     user: "SocialMediaEnthusiast23",
@@ -370,7 +363,7 @@ const techArticlesComments = [
   },
   {
     articleId: 8,
-    id: 46,
+    id: 45,
     comment:
       "Snapchat's AI bot may not be the most advanced, but its focus on preventing unwanted explicit content is a valuable aspect. User privacy and protection should always be a priority.",
     user: "DigitalPrivacyDefender",
