@@ -19,9 +19,7 @@ export class Home extends Component {
     window.scrollTo(0, 0);
     this.setState({
       selectedTechArticle: this.props.techArticles[i],
-      selectedTechArticleComments: this.props.techArticlesComments.filter(
-        (comment) => comment.articleId === this.props.techArticles[i].id
-      ),
+      selectedTechArticleComments: this.props.techArticlesComments,
     });
   };
   render() {

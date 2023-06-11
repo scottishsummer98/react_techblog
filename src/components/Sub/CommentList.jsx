@@ -3,10 +3,9 @@ import dateFormat from "dateformat";
 import { CardText } from "reactstrap";
 
 const CommentList = (props) => {
-  console.log(props);
   const comments = props.comments.map((comment) => {
     return (
-      <div className="commentsList_container">
+      <div className="commentsList_container" key={comment.id}>
         <div className="commenteesinfo">
           <img
             className="commentList_avatarimage"

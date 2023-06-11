@@ -4,6 +4,9 @@ import CommentForm from "./CommentForm";
 import { Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
 
 const TechArticleDetailed = (props) => {
+  const comments = props.selectedTechArticleComments.filter(
+    (comment) => comment.articleId === props.selectedTechArticle.id
+  );
   return (
     <Card
       body
@@ -32,8 +35,8 @@ const TechArticleDetailed = (props) => {
       </CardBody>
       <hr />
       <CardBody>
-        <CommentList comments={props.selectedTechArticleComments} />
-        <CommentForm />
+        <CommentList comments={comments} />
+        <CommentForm articleId={props.selectedTechArticle.id} />
       </CardBody>
     </Card>
   );
