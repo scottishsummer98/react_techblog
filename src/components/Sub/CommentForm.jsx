@@ -48,6 +48,7 @@ export class CommentForm extends Component {
                   name="user"
                   placeholder="User Name"
                   type="text"
+                  value={this.state.user}
                   onChange={this.handleFormInput}
                 />
               </FormGroup>
@@ -60,12 +61,13 @@ export class CommentForm extends Component {
                   name="comment"
                   placeholder="Enter Comment"
                   type="text"
+                  value={this.state.comment}
                   onChange={this.handleFormInput}
                 />
               </FormGroup>
             </Col>
           </Row>
-          <Button>Comment</Button>
+          <Button type="submit">Comment</Button>
         </Form>
       </div>
     );

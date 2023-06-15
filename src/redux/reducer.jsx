@@ -11,7 +11,6 @@ export const Reducer = (state = initialState, action) => {
     let comment = action.payload;
     comment.id = state.techArticlesComments.length;
     comment.date = new Date().toDateString();
-    console.log(comment);
     return {
       ...state,
       techArticlesComments: state.techArticlesComments.concat(comment),

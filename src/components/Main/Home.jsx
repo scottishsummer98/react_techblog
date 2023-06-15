@@ -13,13 +13,11 @@ const mapStateToProps = (state) => {
 export class Home extends Component {
   state = {
     selectedTechArticle: null,
-    selectedTechArticleComments: null,
   };
-  onTechArticleSelect = (i) => {
+  onTechArticleSelect = (index) => {
     window.scrollTo(0, 0);
     this.setState({
-      selectedTechArticle: this.props.techArticles[i],
-      selectedTechArticleComments: this.props.techArticlesComments,
+      selectedTechArticle: this.props.techArticles[index],
     });
   };
   render() {
@@ -31,19 +29,24 @@ export class Home extends Component {
         </div>
       );
     });
+    let techArticleDetail = null;
+    if (this.state.selectedTechArticle != null) {
+      const techArticleComments = this.props.techArticlesComments.filter(
+        (comment) => {
+          return comment.articleId === this.state.selectedTechArticle.id;
+        }
+      );
+      techArticleDetail = (
+        <TechArticleDetailed
+          selectedTechArticle={this.state.selectedTechArticle}
+          selectedTechArticleComments={techArticleComments}
+        />
+      );
+    }
     return (
       <div className="home_container">
         <div className="techArticleShort_container">{techarticle}</div>
-        <div>
-          {this.state.selectedTechArticle ? (
-            <TechArticleDetailed
-              selectedTechArticle={this.state.selectedTechArticle}
-              selectedTechArticleComments={
-                this.state.selectedTechArticleComments
-              }
-            />
-          ) : null}
-        </div>
+        <div>{techArticleDetail}</div>
       </div>
     );
   }
