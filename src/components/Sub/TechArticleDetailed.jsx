@@ -33,7 +33,10 @@ const TechArticleDetailed = (props) => {
       <hr />
       <CardBody>
         <CommentList comments={props.selectedTechArticleComments} />
-        <CommentForm articleId={props.selectedTechArticle.id} />
+        <CommentForm
+          articleId={props.selectedTechArticle.id}
+          addComment={props.addComment}
+        />
       </CardBody>
     </Card>
   );

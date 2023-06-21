@@ -2,11 +2,26 @@ import React, { Component } from "react";
 import TechArticleShort from "../sub/TechArticleShort";
 import TechArticleDetailed from "../sub/TechArticleDetailed";
 import { connect } from "react-redux";
+import * as actionTypes from "../../redux/actionTypes";
 
 const mapStateToProps = (state) => {
   return {
     techArticles: state.techArticles,
     techArticlesComments: state.techArticlesComments,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addComment: (articleId, comment, user) =>
+      dispatch({
+        type: actionTypes.ADD_COMMENT,
+        payload: {
+          articleId: articleId,
+          comment: comment,
+          user: user,
+        },
+      }),
   };
 };
 
@@ -40,6 +55,7 @@ export class Home extends Component {
         <TechArticleDetailed
           selectedTechArticle={this.state.selectedTechArticle}
           selectedTechArticleComments={techArticleComments}
+          addComment={this.props.addComment}
         />
       );
     }
@@ -52,4 +68,4 @@ export class Home extends Component {
   }
 }
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

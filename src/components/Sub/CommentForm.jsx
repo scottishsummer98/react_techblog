@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Form, Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
-import { connect } from "react-redux";
 
 export class CommentForm extends Component {
   constructor(props) {
@@ -21,14 +20,11 @@ export class CommentForm extends Component {
     });
   };
   handleFormSubmit = (event) => {
-    this.props.dispatch({
-      type: "ADD_COMMENT",
-      payload: {
-        articleId: this.props.articleId,
-        comment: this.state.comment,
-        user: this.state.user,
-      },
-    });
+    this.props.addComment(
+      this.props.articleId,
+      this.state.comment,
+      this.state.user
+    );
     this.setState({
       comment: "",
       user: "",
@@ -74,4 +70,4 @@ export class CommentForm extends Component {
   }
 }
 
-export default connect()(CommentForm);
+export default CommentForm;

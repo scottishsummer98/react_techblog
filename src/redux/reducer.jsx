@@ -1,20 +1,31 @@
 import techArticlesApi from "../api/TechApi";
 import techArticlesCommentsApi from "../api/TechCommentsApi";
+import { combineReducers } from "redux";
+import * as actionTypes from "./actionTypes";
 
-const initialState = {
-  techArticles: techArticlesApi,
-  techArticlesComments: techArticlesCommentsApi,
-};
-
-export const Reducer = (state = initialState, action) => {
-  if (action.type === "ADD_COMMENT") {
-    let comment = action.payload;
-    comment.id = state.techArticlesComments.length;
-    comment.date = new Date().toDateString();
-    return {
-      ...state,
-      techArticlesComments: state.techArticlesComments.concat(comment),
-    };
+const techArticlesReducer = (techArticlesState = techArticlesApi, action) => {
+  switch (action.type) {
+    default:
+      return techArticlesState;
   }
-  return state;
 };
+
+const techArticlesCommentsReducer = (
+  techArticleCommentsState = techArticlesCommentsApi,
+  action
+) => {
+  switch (action.type) {
+    case actionTypes.ADD_COMMENT:
+      let comment = action.payload;
+      comment.id = techArticleCommentsState.length;
+      comment.date = new Date().toString();
+      return techArticleCommentsState.concat(comment);
+    default:
+      return techArticleCommentsState;
+  }
+};
+
+export const Reducer = combineReducers({
+  techArticles: techArticlesReducer,
+  techArticlesComments: techArticlesCommentsReducer,
+});
