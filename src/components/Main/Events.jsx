@@ -1,12 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import Loading from "../sub/Loading";
 
 export class Events extends Component {
   render() {
     document.title = "Events";
     return (
-      <div>Events</div>
-    )
+      <div>
+        Events
+        <Loading />
+      </div>
+    );
   }
 }
 
-export default Events
+export default Events;
