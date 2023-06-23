@@ -1,10 +1,24 @@
-import techArticlesApi from "../api/TechApi";
 import techArticlesCommentsApi from "../api/TechCommentsApi";
 import { combineReducers } from "redux";
 import * as actionTypes from "./actionTypes";
 
-const techArticlesReducer = (techArticlesState = techArticlesApi, action) => {
+const techArticlesReducer = (
+  techArticlesState = { isLoading: false, techArticles: [] },
+  action
+) => {
   switch (action.type) {
+    case actionTypes.TECHARTICLES_LOADING:
+      return {
+        ...techArticlesState,
+        isLoading: true,
+        techArticles: [],
+      };
+    case actionTypes.LOAD_TECHARTICLES:
+      return {
+        ...techArticlesState,
+        isLoading: false,
+        techArticles: action.payload,
+      };
     default:
       return techArticlesState;
   }
