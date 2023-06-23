@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TechArticleShort from "../sub/TechArticleShort";
 import TechArticleDetailed from "../sub/TechArticleDetailed";
 import { connect } from "react-redux";
-import * as actionTypes from "../../redux/actionTypes";
+import { addComment } from "../../redux/actionCreators";
 
 const mapStateToProps = (state) => {
   return {
@@ -14,14 +14,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addComment: (articleId, comment, user) =>
-      dispatch({
-        type: actionTypes.ADD_COMMENT,
-        payload: {
-          articleId: articleId,
-          comment: comment,
-          user: user,
-        },
-      }),
+      dispatch(addComment(articleId, comment, user)),
   };
 };
 
