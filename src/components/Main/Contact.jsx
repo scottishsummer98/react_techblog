@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import { Row, Col, FormGroup, Label, Button } from "reactstrap";
 import { LocalForm, Control, Errors } from "react-redux-form";
+
+const required = (val) => val && val.length;
+const isNumber = (val) => !isNaN(Number(val));
+const isValidEmail = (val) =>
+  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+    val
+  );
+
 export class Contact extends Component {
   handleFormSubmit = (values) => {
     console.log(values);
@@ -18,6 +26,15 @@ export class Contact extends Component {
                   className="form-control"
                   model=".fullname"
                   placeholder="Enter Full Name"
+                  validators={{
+                    required,
+                  }}
+                />
+                <Errors
+                  className="text-danger"
+                  model=".fullname"
+                  show="touched"
+                  messages={{ required: "Please fill up the required field" }}
                 />
               </FormGroup>
             </Col>
@@ -28,6 +45,19 @@ export class Contact extends Component {
                   className="form-control"
                   model=".email"
                   placeholder="Enter Email"
+                  validators={{
+                    required,
+                    isValidEmail,
+                  }}
+                />
+                <Errors
+                  className="text-danger"
+                  model=".email"
+                  show="touched"
+                  messages={{
+                    required: "Please fill up the required field",
+                    isValidEmail: "Please enter a valid email address",
+                  }}
                 />
               </FormGroup>
             </Col>
@@ -40,6 +70,19 @@ export class Contact extends Component {
                   className="form-control"
                   model=".contactno"
                   placeholder="Enter Contact No."
+                  validators={{
+                    required,
+                    isNumber,
+                  }}
+                />
+                <Errors
+                  className="text-danger"
+                  model=".contactno"
+                  show="touched"
+                  messages={{
+                    required: "Please fill up the required field",
+                    isNumber: "Please enter a valid mobile number",
+                  }}
                 />
               </FormGroup>
             </Col>
@@ -62,6 +105,17 @@ export class Contact extends Component {
               model=".address"
               placeholder="Enter Address"
               rows="2"
+              validators={{
+                required,
+              }}
+            />
+            <Errors
+              className="text-danger"
+              model=".address"
+              show="touched"
+              messages={{
+                required: "Please fill up the required field",
+              }}
             />
           </FormGroup>
           <Row>
@@ -72,6 +126,17 @@ export class Contact extends Component {
                   className="form-control"
                   model=".city"
                   placeholder="Enter City"
+                  validators={{
+                    required,
+                  }}
+                />
+                <Errors
+                  className="text-danger"
+                  model=".city"
+                  show="touched"
+                  messages={{
+                    required: "Please fill up the required field",
+                  }}
                 />
               </FormGroup>
             </Col>
@@ -82,6 +147,17 @@ export class Contact extends Component {
                   className="form-control"
                   model=".zip"
                   placeholder="Enter Zip"
+                  validators={{
+                    required,
+                  }}
+                />
+                <Errors
+                  className="text-danger"
+                  model=".zip"
+                  show="touched"
+                  messages={{
+                    required: "Please fill up the required field",
+                  }}
                 />
               </FormGroup>
             </Col>
