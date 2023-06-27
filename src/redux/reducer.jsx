@@ -1,4 +1,6 @@
 import techArticlesCommentsApi from "../api/TechCommentsApi";
+import { InitialContactForm } from "../forms/contactForms";
+import { createForms } from "react-redux-form";
 import { combineReducers } from "redux";
 import * as actionTypes from "./actionTypes";
 
@@ -42,4 +44,7 @@ const techArticlesCommentsReducer = (
 export const Reducer = combineReducers({
   techArticles: techArticlesReducer,
   techArticlesComments: techArticlesCommentsReducer,
+  ...createForms({
+    contactForm: InitialContactForm,
+  }),
 });
