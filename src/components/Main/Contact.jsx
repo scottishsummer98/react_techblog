@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { Row, Col, FormGroup, Label, Button } from "reactstrap";
+import { Row, Col, FormGroup, Label, Button, Alert } from "reactstrap";
 import { Form, Control, Errors, actions } from "react-redux-form";
 import { connect } from "react-redux";
+import { baseUrl } from "../../redux/baseURL";
+import axios from "axios";
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -19,14 +21,51 @@ const isValidEmail = (val) =>
   );
 
 export class Contact extends Component {
+  state = {
+    alertShow: false,
+    alertText: null,
+    alertType: null,
+  };
   handleFormSubmit = (values) => {
-    console.log(values);
+    axios
+      .post(baseUrl + "contactForm", values)
+      .then((res) => res.status)
+      .then((status) => {
+        if (status === 201) {
+          this.setState({
+            alertShow: true,
+            alertText: "Your response has been recorded successfully!",
+            alertType: "success",
+          });
+          setTimeout(() => {
+            this.setState({
+              alertShow: false,
+            });
+          }, 2000);
+        }
+      })
+      .catch((err) => {
+        this.setState({
+          alertShow: true,
+          alertText: err.message,
+          alertType: "danger",
+        });
+        setTimeout(() => {
+          this.setState({
+            alertShow: false,
+          });
+        }, 2000);
+      });
+
     this.props.resetContactForm();
   };
   render() {
     document.title = "Contact";
     return (
       <div>
+        <Alert isOpen={this.state.alertShow} color={this.state.alertType}>
+          {this.state.alertText}
+        </Alert>
         <Form
           model="contactForm"
           onSubmit={(values) => this.handleFormSubmit(values)}

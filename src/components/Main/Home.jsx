@@ -3,8 +3,12 @@ import TechArticleShort from "../sub/TechArticleShort";
 import TechArticleDetailed from "../sub/TechArticleDetailed";
 import Loading from "../sub/Loading";
 import { connect } from "react-redux";
-import { addComment, fetchTechArticles } from "../../redux/actionCreators";
-
+import {
+  addComment,
+  fetchTechArticles,
+  fetchTechArticlesCommnets,
+} from "../../redux/actionCreators";
+import { Alert } from "reactstrap";
 const mapStateToProps = (state) => {
   return {
     techArticles: state.techArticles,
@@ -17,6 +21,7 @@ const mapDispatchToProps = (dispatch) => {
     addComment: (articleId, comment, user) =>
       dispatch(addComment(articleId, comment, user)),
     fetchTechArticles: () => dispatch(fetchTechArticles()),
+    fetchTechArticlesComments: () => dispatch(fetchTechArticlesCommnets()),
   };
 };
 
@@ -32,11 +37,14 @@ export class Home extends Component {
   };
   componentDidMount() {
     this.props.fetchTechArticles();
+    this.props.fetchTechArticlesComments();
   }
   render() {
     document.title = "Tech React";
     if (this.props.techArticles.isLoading) {
       return <Loading />;
+    } else if (this.props.techArticles.errmsg != null) {
+      return <Alert color="danger">{this.props.techArticles.errmsg}</Alert>;
     } else {
       const techarticle = this.props.techArticles.techArticles.map(
         (techArticle, index) => {
@@ -49,16 +57,20 @@ export class Home extends Component {
       );
       let techArticleDetail = null;
       if (this.state.selectedTechArticle != null) {
-        const techArticleComments = this.props.techArticlesComments.filter(
-          (comment) => {
-            return comment.articleId === this.state.selectedTechArticle.id;
-          }
-        );
+        const techArticleComments =
+          this.props.techArticlesComments.techArticlesComments.filter(
+            (comment) => {
+              return comment.articleId === this.state.selectedTechArticle.id;
+            }
+          );
         techArticleDetail = (
           <TechArticleDetailed
             selectedTechArticle={this.state.selectedTechArticle}
             selectedTechArticleComments={techArticleComments}
             addComment={this.props.addComment}
+            techArticlesCommentsisLoading={
+              this.props.techArticlesComments.isLoading
+            }
           />
         );
       }

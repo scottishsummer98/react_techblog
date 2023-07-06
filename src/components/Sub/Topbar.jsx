@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "../../assets/react.png";
 import { Navbar, NavbarBrand, Nav } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import { baseUrl } from "../../redux/baseURL";
 
 function Topbar() {
   return (
@@ -10,7 +10,11 @@ function Topbar() {
       <Navbar expand container fixed="top" color="dark" dark>
         <NavbarBrand>
           <NavLink to="/">
-            <img className="topbar_logo" src={logo} alt="" />
+            <img
+              className="topbar_logo"
+              src={baseUrl + "images/react.png"}
+              alt=""
+            />
           </NavLink>
         </NavbarBrand>
         <NavbarBrand>

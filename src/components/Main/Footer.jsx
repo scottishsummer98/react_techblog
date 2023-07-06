@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import logo from "../../assets/react.png";
 import { BiCopyright } from "react-icons/bi";
 import { BsFacebook, BsTwitter, BsLinkedin, BsTelegram } from "react-icons/bs";
+import { baseUrl } from "../../redux/baseURL";
 
 export class Footer extends Component {
   render() {
@@ -10,7 +10,11 @@ export class Footer extends Component {
         <div className="footer_container">
           <div className="footer_columns">
             <div className="footer_items">
-              <img className="footer_logo" src={logo} alt="Logo" />
+              <img
+                className="footer_logo"
+                src={baseUrl + "images/react.png"}
+                alt="Logo"
+              />
               <h4>Tech React</h4>
               <p>
                 <BiCopyright />
